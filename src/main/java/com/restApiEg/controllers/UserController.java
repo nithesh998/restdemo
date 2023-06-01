@@ -35,6 +35,8 @@ public class UserController {
   @GetMapping("/user")
   public ResponseEntity<List<User>> getAllUser(){
 	  List<User> user = userservice.getAllUser();
+	  
+	  System.out.println("sop in get mapping");
 	return new ResponseEntity<List<User>>(user, HttpStatus.OK);
 	  
   }
