@@ -28,6 +28,7 @@ public class UserController {
 	  String id = UUID.randomUUID().toString();
 	  user.setId(id);
 	  User saveUser = userservice.saveUser(user);
+	  System.out.println("sop in post mapping");
 	return new ResponseEntity<User>(saveUser, HttpStatus.CREATED);
 	  
   }
